@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaTest.ViewModels;assembly=AvaloniaTest"
+             mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="450"
+             x:Class="AvaloniaTest.Views.CityListView">
+  <DockPanel>
+    <Grid RowDefinitions="Auto,Auto">
+      <ComboBox Grid.Row="0" Items="{Binding Countries}" SelectedItem="{Binding SelectedCountry, Mode=TwoWay}" HorizontalAlignment="Stretch">
+        <ComboBox.ItemTemplate>
+          <DataTemplate>
+            <TextBlock Grid.Column="1" Text="{Binding Name}"/>
+          </DataTemplate>
+        </ComboBox.ItemTemplate> 
+      </ComboBox>
+      <ListBox Grid.Row="1" Items="{Binding Cities}">
+        <ListBox.ItemTemplate>
+          <DataTemplate>
+            <TextBlock Text="{Binding Name}"/>
+          </DataTemplate>
+        </ListBox.ItemTemplate>
+      </ListBox>
+    </Grid>
+  </DockPanel>
+</UserControl>
