@@ -10,7 +10,7 @@
       <ComboBox Grid.Row="0" Items="{Binding Countries}" SelectedItem="{Binding SelectedCountry, Mode=TwoWay}" HorizontalAlignment="Stretch">
         <ComboBox.ItemTemplate>
           <DataTemplate>
-            <TextBlock Grid.Column="1" Text="{Binding Name}"/>
+            <TextBlock Text="{Binding Name}"/>
           </DataTemplate>
         </ComboBox.ItemTemplate> 
       </ComboBox>
