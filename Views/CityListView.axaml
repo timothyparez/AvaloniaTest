@@ -7,7 +7,7 @@
              x:Class="AvaloniaTest.Views.CityListView">
   <DockPanel>
     <Grid RowDefinitions="Auto,Auto">
-      <ComboBox Grid.Row="0" Items="{Binding Countries}" SelectedItem="{Binding SelectedCountry, Mode=TwoWay}" HorizontalAlignment="Stretch">
+      <ComboBox x:Name="countryComboBox" Grid.Row="0" Items="{Binding Countries}" SelectedItem="{Binding SelectedCountry, Mode=TwoWay}" HorizontalAlignment="Stretch">
         <ComboBox.ItemTemplate>
           <DataTemplate>
             <TextBlock Text="{Binding Name}"/>

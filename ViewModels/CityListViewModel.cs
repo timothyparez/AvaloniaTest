@@ -1,4 +1,5 @@
-﻿using AvaloniaTest.Models;
+﻿using Avalonia.Controls;
+using AvaloniaTest.Models;
 using AvaloniaTest.Services;
 using DynamicData;
 using DynamicData.Binding;
@@ -42,6 +43,9 @@ namespace AvaloniaTest.ViewModels
                 .Subscribe();
 
             _cityCache.AddOrUpdate(cities);
+
+            // This is to pre-fill the selection with a default to test the combobox
+            SelectedCountry = new Country { CountryId = 3, Name = "The Netherlands" };
 
             //Search logic
             Func<City, bool> cityFilter(Country country) => city =>
