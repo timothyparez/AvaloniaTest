@@ -12,6 +12,7 @@
     <PackageReference Include="Avalonia.Desktop" Version="0.10.0" />
     <PackageReference Include="Avalonia.Diagnostics" Version="0.10.0" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0" />
-    <PackageReference Include="DynamicData" Version="7.1.1" />
+    <PackageReference Include="DynamicData" Version="7.1.17" />
+    <PackageReference Include="ReactiveUI.Fody" Version="14.1.1" />
   </ItemGroup>
 </Project>

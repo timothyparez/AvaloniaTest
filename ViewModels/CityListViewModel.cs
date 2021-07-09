@@ -4,6 +4,7 @@ using AvaloniaTest.Services;
 using DynamicData;
 using DynamicData.Binding;
 using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,13 +15,9 @@ namespace AvaloniaTest.ViewModels
 {
     public class CityListViewModel : ViewModelBase
     {
-        private Country _selectedCountry;
-        public Country SelectedCountry
-        {
-            get => _selectedCountry;
-            private set => this.RaiseAndSetIfChanged(ref _selectedCountry, value);
-        }
-
+        [Reactive]
+        public Country SelectedCountry { get; set; }
+        
         private SourceCache<Country, int> _countryCache = new SourceCache<Country, int>(x => x.CountryId);
         public ReadOnlyObservableCollection<Country> Countries => _countries;
         private readonly ReadOnlyObservableCollection<Country> _countries;
